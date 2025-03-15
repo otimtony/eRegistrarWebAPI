@@ -1,0 +1,38 @@
+### Get list of students
+GET http://localhost:8080/eregistrar/api/student/list
+Accept: application/json
+
+### Register a new student
+POST http://localhost:8080/eregistrar/api/student/register
+Content-Type: application/json
+
+{
+  "studentNumber": "000-61-0002",
+  "firstName": "John",
+  "middleName": "Doe",
+  "lastName": "Smith",
+  "cgpa": 3.9,
+  "enrollmentDate": "2024-03-14",
+  "isInternational": "No"
+}
+
+### Get student details by ID
+GET http://localhost:8080/eregistrar/api/student/get/1
+Accept: application/json
+
+### Update student information
+PUT http://localhost:8080/eregistrar/api/student/update/1
+Content-Type: application/json
+
+{
+  "studentNumber": "000-61-0001",
+  "firstName": "Jane",
+  "middleName": "Doe",
+  "lastName": "Smith",
+  "cgpa": 3.8,
+  "enrollmentDate": "2023-09-01",
+  "isInternational": "Yes"
+}
+
+### Delete a student
+### DELETE http://localhost:8080/eregistrar/api/student/delete/3
